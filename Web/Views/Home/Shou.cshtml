@@ -1,5 +1,5 @@
-﻿@{
-    ViewBag.Title = "Книжный магазин";
+﻿
+@{
     Layout = null;
 }
 
@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    
+    <title>Shou</title>
 </head>
 <body>
     <div>
@@ -22,14 +22,19 @@
             {
                 <tr>
                     <td><p>@b.Name</p></td>
-                    <td><p><a href="/Home/Buy?id=@b.Id">Купить</a></p></td>
+                    <td><p><a href="/Home/Buy?idd=@b.Id">Купить</a></p></td>
                 </tr>
             }
-            
+
         </table>
         <br />
         <p><a href="/Home/Shou">Показать покупки</a></p>
+        <br />
+        @foreach (var b in ViewBag.Pokupki)
+        {
+            <p>@b.Person купил @b.BookId</p><br />
+
+        }
     </div>
 </body>
 </html>
-

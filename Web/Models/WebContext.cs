@@ -9,6 +9,7 @@ namespace Web.Models
     public class WebContext : DbContext
     {
         public DbSet<Book> Books { get; set; }
+        public DbSet<Pokupka> Pokupki { get; set; }
 
     }
 
